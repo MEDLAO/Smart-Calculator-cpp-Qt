@@ -1,0 +1,31 @@
+# Build folders
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Qt Creator user/project files
+*.pro.user*
+*.qbs.user*
+*.autosave
+
+# Object files and binaries
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
+
+# macOS system files
+.DS_Store
+
+# Qt resource generated files
+qrc_*.cpp
+moc_*.cpp
+ui_*.h
+
+# Logs
+*.log
+

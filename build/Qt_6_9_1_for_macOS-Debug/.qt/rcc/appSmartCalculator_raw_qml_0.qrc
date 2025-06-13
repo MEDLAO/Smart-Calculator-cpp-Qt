@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/SmartCalculator/">
-    <file alias="Main.qml">/Users/sml/QtProjects/SmartCalculator/Main.qml</file>
-    <file alias=".gitignore">/Users/sml/QtProjects/SmartCalculator/.gitignore</file>
-  </qresource>
-</RCC>
-

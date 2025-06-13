@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_appSmartCalculator_FILE /Users/sml/QtProjects/SmartCalculator/build/Qt_6_9_1_for_macOS-Debug/appSmartCalculator.app/Contents/MacOS/appSmartCalculator)
-set(__QT_DEPLOY_TARGET_appSmartCalculator_TYPE EXECUTABLE)
