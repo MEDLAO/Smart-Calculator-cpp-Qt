@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/SmartCalculator">/Users/sml/QtProjects/SmartCalculator/build/Qt_6_9_1_for_macOS-Debug/SmartCalculator</file>
+
+  </qresource>
+</RCC>

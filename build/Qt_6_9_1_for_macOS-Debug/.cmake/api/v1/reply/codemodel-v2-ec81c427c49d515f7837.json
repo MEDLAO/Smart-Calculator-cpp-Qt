@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-81cc05cde27d4aa47e7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SmartCalculator",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-67a848ced0edb347ebd8.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-b379154aa7f398bf203b.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-639fd21b19a9a7b30525.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-5ce57096075690533406.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-3b2897c4a90c469a3b25.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator-Debug-3c5a86516b0943c7aac8.json",
+					"name" : "appSmartCalculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_autogen-Debug-30e4d98752224bb82fb6.json",
+					"name" : "appSmartCalculator_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_autogen_timestamp_deps-Debug-ed90ea9bf4df8f070d8c.json",
+					"name" : "appSmartCalculator_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_copy_qml-Debug-d4832c489a559b98e659.json",
+					"name" : "appSmartCalculator_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_copy_res-Debug-22457cdf72e7103e7d1b.json",
+					"name" : "appSmartCalculator_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_qmlimportscan-Debug-b58fddbe3a9a5f0f1310.json",
+					"name" : "appSmartCalculator_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_qmllint-Debug-cad4437ed031eb940f75.json",
+					"name" : "appSmartCalculator_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_qmllint_json-Debug-41ea97e18aca82a7238d.json",
+					"name" : "appSmartCalculator_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_qmllint_module-Debug-e5df8cd058851f179a2f.json",
+					"name" : "appSmartCalculator_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appSmartCalculator_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appSmartCalculator_qmltyperegistration-Debug-6d7db2b96d61b0a801ed.json",
+					"name" : "appSmartCalculator_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appSmartCalculator_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appSmartCalculator_aotstats_target-Debug-ab6871409b25a3d71821.json",
+					"name" : "module_appSmartCalculator_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/sml/QtProjects/SmartCalculator/build/Qt_6_9_1_for_macOS-Debug",
+		"source" : "/Users/sml/QtProjects/SmartCalculator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,5 @@
+module SmartCalculator
+typeinfo appSmartCalculator.qmltypes
+prefer :/qt/qml/SmartCalculator/
+Main 1.0 Main.qml
+

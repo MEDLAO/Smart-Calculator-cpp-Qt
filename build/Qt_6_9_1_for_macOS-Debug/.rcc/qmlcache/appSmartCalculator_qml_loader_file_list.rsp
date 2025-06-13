@@ -1,0 +1,5 @@
+--resource
+/Users/sml/QtProjects/SmartCalculator/build/Qt_6_9_1_for_macOS-Debug/.qt/rcc/qmake_SmartCalculator.qrc
+--resource
+/Users/sml/QtProjects/SmartCalculator/build/Qt_6_9_1_for_macOS-Debug/.qt/rcc/appSmartCalculator_raw_qml_0.qrc
+/qt/qml/SmartCalculator/Main.qml
