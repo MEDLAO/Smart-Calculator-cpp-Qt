@@ -4,6 +4,8 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+*.user*
+
 
 # Qt Creator user/project files
 *.pro.user*
