@@ -16,10 +16,10 @@ ApplicationWindow {
         // Display area
         Rectangle {
             id: displayArea
-            width: parent.width
             height: 60
             color: "#2c3e50"
             radius: 8
+            Layout.fillWidth: true
 
             Text {
                 id: displayText
@@ -30,35 +30,88 @@ ApplicationWindow {
             }
         }
 
-        Grid {
+        // Number buttons 1–9 + 0
+        GridLayout {
             id: numberGrid
             columns: 3
-            spacing: 8
+            rowSpacing: 8
+            columnSpacing: 8
+            Layout.fillWidth: true
 
-            // Row 1
-            Button { text: "1"; width: 80; height: 40 }
-            Button { text: "2"; width: 80; height: 40 }
-            Button { text: "3"; width: 80; height: 40 }
+            Button {
+                text: "1"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "2"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "3"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
 
-            // Row 2
-            Button { text: "4"; width: 80; height: 40 }
-            Button { text: "5"; width: 80; height: 40 }
-            Button { text: "6"; width: 80; height: 40 }
+            Button {
+                text: "4"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "5"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "6"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
 
-            // Row 3
-            Button { text: "7"; width: 80; height: 40 }
-            Button { text: "8"; width: 80; height: 40 }
-            Button { text: "9"; width: 80; height: 40 }
+            Button {
+                text: "7"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "8"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
+            Button {
+                text: "9"
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
+            }
 
-            // Row 4
             Button {
                 text: "0"
-                width: 248   // 80 * 3 + spacing * 2
-                height: 40
+                Layout.columnSpan: 3
+                Layout.fillWidth: true
+                onClicked: {
+                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                }
             }
         }
-
-
     }
 }
-
