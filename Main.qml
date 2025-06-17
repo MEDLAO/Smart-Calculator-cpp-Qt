@@ -8,14 +8,14 @@ ApplicationWindow {
     height: 400
     title: "Smart Calculator"
 
+    property string expression: ""
+
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 10
         spacing: 10
 
-        // Display area
         Rectangle {
-            id: displayArea
             height: 60
             color: "#2c3e50"
             radius: 8
@@ -23,95 +23,54 @@ ApplicationWindow {
 
             Text {
                 id: displayText
-                text: "0"
+                text: expression === "" ? "0" : expression
                 anchors.centerIn: parent
-                font.pixelSize: 30
+                font.pixelSize: 28
                 color: "white"
             }
         }
 
-        // Number buttons 1–9 + 0
         GridLayout {
-            id: numberGrid
-            columns: 3
+            columns: 4
             rowSpacing: 8
             columnSpacing: 8
             Layout.fillWidth: true
 
-            Button {
-                text: "1"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "2"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "3"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
+            // Digits and operators
+            Repeater {
+                model: ["7", "8", "9", "/",
+                        "4", "5", "6", "*",
+                        "1", "2", "3", "-",
+                        "0", "C", "=", "+"]
 
-            Button {
-                text: "4"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "5"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "6"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-
-            Button {
-                text: "7"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "8"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-            Button {
-                text: "9"
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
-                }
-            }
-
-            Button {
-                text: "0"
-                Layout.columnSpan: 3
-                Layout.fillWidth: true
-                onClicked: {
-                    displayText.text = displayText.text === "0" ? text : displayText.text + text
+                delegate: Button {
+                    text: modelData
+                    Layout.fillWidth: true
+                    onClicked: {
+                        if (text === "C") {
+                            expression = ""
+                        } else if (text === "=") {
+                            expression = calculate(expression)
+                        } else {
+                            expression += text
+                        }
+                    }
                 }
             }
         }
+    }
+
+    function calculate(expr) {
+        // Only handle +, -, *, / safely
+        try {
+            return evalSafe(expr)
+        } catch (e) {
+            return "Error"
+        }
+    }
+
+    function evalSafe(expr) {
+        var clean = expr.replace(/[^0-9\+\-\*\/\.]/g, "")
+        return String(Math.floor(Function("return " + clean)()))
     }
 }
