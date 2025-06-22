@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("calculator", &calculator);
 
     // Load the QML file (adjust if needed)
-    engine.loadFromModule("SmartCalculator", "Main");
+    engine.load(QUrl(QStringLiteral("qrc:/Source Files/Main.qml")));
+
 
     // Handle QML load failure
     QObject::connect(
