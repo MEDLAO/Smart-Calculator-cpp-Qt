@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
 
     // Load the QML file (registered with qt_add_qml_module)
-    engine.loadFromModule("SmartCalculator", "Main");
+    engine.load(QUrl("qrc:/qml/Main.qml"));
 
     return app.exec();
 }
