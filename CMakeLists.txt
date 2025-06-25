@@ -19,14 +19,10 @@ qt_add_qml_module(appSmartCalculator
     VERSION 1.0
     QML_FILES
          qml/Main.qml
+         QML_FILES Main.qml
+         QML_FILES Main.qml
 
 )
-
-qt_add_resources(appSmartCalculator "qml_resources"
-    PREFIX "/qml"
-    FILES qml/Main.qml
-)
-
 
 set_target_properties(appSmartCalculator PROPERTIES
     MACOSX_BUNDLE TRUE

@@ -2,6 +2,9 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "calculator.h"
+#include <QDir>
+#include <QDebug>
+
 
 
 int main(int argc, char *argv[])
@@ -21,7 +24,11 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
 
     // Load the QML file (registered with qt_add_qml_module)
-    engine.load(QUrl("qrc:/qml/Main.qml"));
+    engine.loadFromModule("SmartCalculator", "Main");
+
+    qDebug() << "Current working directory:" << QDir::currentPath();
+
+
 
     return app.exec();
 }
