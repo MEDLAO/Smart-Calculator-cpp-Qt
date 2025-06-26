@@ -2,33 +2,23 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "calculator.h"
-#include <QDir>
-#include <QDebug>
-
-
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
     QQmlApplicationEngine engine;
 
     Calculator calculator;
     engine.rootContext()->setContextProperty("calculator", &calculator);
 
-    // Connect error handler BEFORE loading the QML
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
-        &app,
-        []() { QCoreApplication::exit(-1); },
-        Qt::QueuedConnection);
-
-    // Load the QML file (registered with qt_add_qml_module)
-    engine.loadFromModule("SmartCalculator", "Main");
-
-    qDebug() << "Current working directory:" << QDir::currentPath();
-
-
+    const QUrl url(QStringLiteral("qrc:/Main.qml"));
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+                     &app, [url](QObject *obj, const QUrl &objUrl) {
+                         if (!obj && url == objUrl)
+                             QCoreApplication::exit(-1);
+                     }, Qt::QueuedConnection);
+    engine.load(url);
 
     return app.exec();
 }

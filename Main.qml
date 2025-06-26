@@ -53,11 +53,14 @@ ApplicationWindow {
                         if (text === "C") {
                             expression = ""
                         } else if (text === "=") {
-                            expression = calculate(expression)
+                            expression = calculator.calculate(expression)
+                        } else if (text === "⌫") {
+                            expression = expression.slice(0, -1)
                         } else {
                             expression += text
                         }
                     }
+
                 }
             }
         }
