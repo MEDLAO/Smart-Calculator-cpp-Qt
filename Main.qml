@@ -43,7 +43,8 @@ ApplicationWindow {
                         "4", "5", "6", "*",
                         "1", "2", "3", "-",
                         "0", ".", "=", "+",
-                        "C", "√", "%", "⌫"]
+                        "C", "√", "%", "⌫",
+                         "(", ")"]
 
 
                 delegate: Button {
@@ -65,18 +66,4 @@ ApplicationWindow {
             }
         }
     }
-
-    /*function calculate(expr) {
-        // Only handle +, -, *, / safely
-        try {
-            return evalSafe(expr)
-        } catch (e) {
-            return "Error"
-        }
-    }*/
-
-    /*function evalSafe(expr) {
-        var clean = expr.replace(/[^0-9\+\-\*\/\.]/g, "")
-        return String(Math.floor(Function("return " + clean)()))
-    }*/
 }
