@@ -17,6 +17,11 @@ QString Calculator::calculate(const QString &expression)
     static const QRegularExpression percentRegex("(\\d+(\\.\\d+)?)%");
     expr.replace(percentRegex, "(\\1 / 100)");
 
+    // Prevent division by zero
+    static const QRegularExpression divZeroRegex("/\\s*0(?!\\d)");
+    if (expr.contains(divZeroRegex)) {
+        return "Cannot divide by zero";
+    }
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(expr);
