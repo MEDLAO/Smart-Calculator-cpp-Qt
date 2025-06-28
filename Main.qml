@@ -57,9 +57,19 @@ ApplicationWindow {
                             expression = calculator.calculate(expression)
                         } else if (text === "⌫") {
                             expression = expression.slice(0, -1)
+                        } else if (text === ".") {
+                            // Get the last number by splitting on operators
+                            let parts = expression.split(/[\+\-\*\/\(\)]/);
+                            let lastNumber = parts[parts.length - 1];
+
+                            // Only add "." if the current number doesn't already have one
+                            if (!lastNumber.includes(".")) {
+                                expression += ".";
+                            }
                         } else {
-                            expression += text
+                            expression += text;
                         }
+
                     }
 
                 }
