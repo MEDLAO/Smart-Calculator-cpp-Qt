@@ -18,7 +18,7 @@ QString Calculator::calculate(const QString &expression)
     expr.replace(percentRegex, "(\\1 / 100)");
 
     // Replace power: a^b → Math.pow(a, b)
-    static const QRegularExpression powerRegex("(\\d+(\\.\\d+)?)\\s*\\^\\s*(\\d+(\\.\\d+)?)");
+    static const QRegularExpression powerRegex("(\\([^\\)]+\\)|-?\\d+(\\.\\d+)?)\\s*\\^\\s*(\\([^\\)]+\\)|-?\\d+(\\.\\d+)?)");
     expr.replace(powerRegex, "Math.pow(\\1, \\3)");
 
     // Prevent division by zero
