@@ -21,6 +21,19 @@ QString Calculator::calculate(const QString &expression)
     static const QRegularExpression powerRegex("(\\([^\\)]+\\)|-?\\d+(\\.\\d+)?)\\s*\\^\\s*(\\([^\\)]+\\)|-?\\d+(\\.\\d+)?)");
     expr.replace(powerRegex, "Math.pow(\\1, \\3)");
 
+    // Replace sin(x) → Math.sin(x)
+    static const QRegularExpression sinRegex("sin\\(([^)]+)\\)");
+    expr.replace(sinRegex, "Math.sin(\\1)");
+
+    // Replace cos(x) → Math.cos(x)
+    static const QRegularExpression cosRegex("cos\\(([^)]+)\\)");
+    expr.replace(cosRegex, "Math.cos(\\1)");
+
+    // Replace tan(x) → Math.tan(x)
+    static const QRegularExpression tanRegex("tan\\(([^)]+)\\)");
+    expr.replace(tanRegex, "Math.tan(\\1)");
+
+
     // Prevent division by zero
     static const QRegularExpression divZeroRegex("/\\s*0(?!\\d)");
     if (expr.contains(divZeroRegex)) {
