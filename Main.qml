@@ -91,13 +91,15 @@ ApplicationWindow {
             Layout.fillWidth: true
 
             Repeater {
-                model: ["sin(", "cos(", "tan(", "√", "%", "^", "C", "⌫"]
+                model: ["π", "sin(", "cos(", "tan(", "√", "%", "^", "C", "⌫"]
 
                 delegate: Button {
                     text: modelData
                     Layout.fillWidth: true
                     onClicked: {
-                        if (text === "C") {
+                        if (text === "π") {
+                            expression += "3.1415926535"
+                        } else if (text === "C") {
                             expression = ""
                         } else if (text === "⌫") {
                             expression = expression.slice(0, -1)
@@ -105,6 +107,7 @@ ApplicationWindow {
                             expression += text
                         }
                     }
+
                 }
 
             }
