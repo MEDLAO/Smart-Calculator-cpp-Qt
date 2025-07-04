@@ -98,7 +98,9 @@ ApplicationWindow {
                     Layout.fillWidth: true
                     onClicked: {
                         if (text === "π") {
+                            if (!expression.endsWith("3.1415926535")){
                             expression += "3.1415926535"
+                            }
                         } else if (text === "C") {
                             expression = ""
                         } else if (text === "⌫") {
