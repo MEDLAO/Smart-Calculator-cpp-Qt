@@ -22,13 +22,22 @@ ApplicationWindow {
             radius: 8
             Layout.fillWidth: true
 
-            Text {
-                id: displayText
-                text: expression === "" ? "0" : expression
-                anchors.centerIn: parent
-                font.pixelSize: 28
-                color: "white"
+            Flickable {
+                contentWidth: displayText.paintedWidth
+                flickableDirection: Flickable.HorizontalFlick
+                interactive: displayText.paintedWidth > width
+                anchors.fill: parent
+                clip: true
+
+                Text {
+                    id: displayText
+                    text: expression === "" ? "0" : expression
+                    font.pixelSize: 28
+                    color: "white"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
             }
+
         }
 
         Button {
